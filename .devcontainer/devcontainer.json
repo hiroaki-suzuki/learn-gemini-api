@@ -1,0 +1,57 @@
+{
+  "name": "Learn Gemini API",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "runArgs": [
+    "--name",
+    "learn-gemini-api"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2.5.5": {
+      "configureZshAsDefaultShell": true
+    },
+    "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1": {
+      "version": "0.9.21",
+      "shellautocompletion": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "astral-sh.ty",
+        "charliermarsh.ruff",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "ryu1kn.partial-diff",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "tyriar.sort-lines",
+        "wayou.vscode-todo-highlight",
+        "yzhang.markdown-all-in-one",
+        "google.gemini-cli-vscode-ide-companion",
+        "anthropic.claude-code",
+        "openai.chatgpt"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=bashhistory-${devcontainerId},target=/home/vscode/.zsh_history,type=volume",
+    "source=claude-code-config-${devcontainerId},target=/home/vscode/.claude,type=volume",
+    "source=gemini-cli-config-${devcontainerId},target=/home/vscode/.gemini,type=volume",
+    "source=codex-config-${devcontainerId},target=/home/vscode/.codex,type=volume"
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude",
+    "TZ": "Asia/Tokyo",
+    "UV_ENV_FILE": ".env"
+  },
+  "postCreateCommand": "chmod +x .devcontainer/post-start.sh",
+  "postStartCommand": "bash .devcontainer/post-start.sh"
+}

@@ -1,0 +1,22 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.tabSize": 4,
+    "cSpell.words": [
+        "bashhistory",
+        "charliermarsh",
+        "codezombiech",
+        "commandhistory",
+        "debugpy",
+        "eamodio",
+        "mhutchie",
+        "njpwerner",
+        "pyproject",
+        "shellautocompletion",
+        "tamasfe",
+        "tyriar",
+        "wayou",
+        "yzhang"
+    ]
+}

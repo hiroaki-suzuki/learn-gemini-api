@@ -1,0 +1,7 @@
+[project]
+name = "learn-gemini-api"
+version = "0.1.0"
+description = "Learn Gemini API"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
