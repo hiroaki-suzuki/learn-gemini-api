@@ -3,6 +3,23 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.tabSize": 4,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.languageServer": "None",
+    "ruff.path": [
+        "${workspaceFolder}/.venv/bin/ruff"
+    ],
+    "ruff.configuration": "${workspaceFolder}/ruff.toml",
+    "ty.path": [
+        "${workspaceFolder}/.venv/bin/ty"
+    ],
+    "ty.configurationFile": "${workspaceFolder}/ty.toml",
     "cSpell.words": [
         "bashhistory",
         "charliermarsh",
@@ -10,9 +27,13 @@
         "commandhistory",
         "debugpy",
         "eamodio",
+        "isort",
         "mhutchie",
         "njpwerner",
+        "pycodestyle",
+        "Pyflakes",
         "pyproject",
+        "pyupgrade",
         "shellautocompletion",
         "tamasfe",
         "tyriar",
