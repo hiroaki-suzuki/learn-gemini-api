@@ -27,6 +27,7 @@
         "commandhistory",
         "debugpy",
         "eamodio",
+        "genai",
         "isort",
         "mhutchie",
         "njpwerner",
